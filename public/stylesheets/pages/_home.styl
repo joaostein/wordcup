@@ -6,16 +6,9 @@
 //
 //-----------------------------------------------------------------------
 
-figure
-  margin: 0
-
-body
-  background: #160c0c url('/images/main-bg.jpg') center 80% no-repeat
-  background-size: contains
-  font-family: 'Montserrat', sans-serif;
-  color: #fff
-  font-weight: 400
-
+// 
+// TOP
+//-----------------------------------------------------------------------
 .main-header
   cf()
   background: rgba(#fff, .12)
@@ -49,9 +42,22 @@ body
 
 .next-match
   col(5/12)
+  figure
+    text-align: center
   img
     width: 100%
+    display: block
+    margin-bottom: 30px
+  legend
+    font-size(22px)
+    margin-bottom: 5px
+  span
+    text-transform: uppercase
+    font-size(14px)
 
+// 
+// MAIN CONTENT
+//-----------------------------------------------------------------------
 .donate
   cf()
   margin-bottom: 40px
@@ -81,25 +87,16 @@ body
 .ong__description
   font-size(14px)
 
-.help-btn
-  float: left
-
+// 
+// FOOTER
+//-----------------------------------------------------------------------
 .main-footer
   margin-bottom: 70px
 
-.next-match
-  figure
-    text-align: center
-  img
-    display: block
-    margin-bottom: 30px
-  legend
-    font-size(22px)
-    margin-bottom: 5px
-  span
-    text-transform: uppercase
-    font-size(14px)
 
+// 
+// SOCIAL MEDIA AND BUTTONS
+//-----------------------------------------------------------------------
 .social-media
   inline-list: 15px
   a, svg
@@ -115,7 +112,9 @@ body
   width: 39px
 
 .help-btn
+  float: left
   background: #00854a
+  line-height: 25px
   inline-block()
   font-size(13px)
   text-transform: uppercase
