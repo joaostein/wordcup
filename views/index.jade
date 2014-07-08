@@ -9,7 +9,7 @@ block content
       .participate
         p Agora você pode ajudar a seleção brasileira a ganhar o mundial e ao mesmo tempo, ajudar milhares de brasileiros a ter mais um motivo para comemorar. Faça uma promessa que vai fazer a diferença e ajude o Brasil a ganhar muito mais do que uma taça.
         p.highlight Como Participar?
-        ol
+        ol.highlight
           li 1 Escolha uma das ONGS abaixo
           li 2 Compartilhe sua promessa
           li 3 Torça pela seleção
@@ -24,6 +24,10 @@ block content
             | Rio de Janeiro
 
     section.donate
+      mixin social-media__icon(name)
+        svg(viewBox="0 0 216 146", class="icon")
+          use(xlink:href="#{name}")
+
       article.ong
         h1.ong__title Associação Vagalume
         .ong__description
@@ -32,8 +36,10 @@ block content
         footer
           a.help-btn(href="#") + Como Ajudar
           ul.social-media
-            li: a(href="#") Facebook
-            li: a(href="#") Twitter
+            li.facebook: a(href="#")
+              +social-media__icon("#facebook")
+            li.twitter: a(href="#")
+              +social-media__icon("#twitter")
 
       article.ong
         h1.ong__title GRAAC
@@ -43,8 +49,10 @@ block content
         footer
           a.help-btn(href="#") + Como Ajudar
           ul.social-media
-            li: a(href="#") Facebook
-            li: a(href="#") Twitter
+            li.facebook: a(href="#")
+              +social-media__icon("#facebook")
+            li.twitter: a(href="#")
+              +social-media__icon("#twitter")
 
       article.ong
         h1.ong__title SOS Mata Atlântica
@@ -54,13 +62,17 @@ block content
         footer
           a.help-btn(href="#") + Como Ajudar
           ul.social-media
-            li: a(href="#") Facebook
-            li: a(href="#") Twitter
+            li.facebook: a(href="#")
+              +social-media__icon("#facebook")
+            li.twitter: a(href="#")
+              +social-media__icon("#twitter")
 
     footer.main-footer
       ul.social-media.social-media--alt
-        li: a(href="#") Facebook
-        li: a(href="#") Twitter
+        li.facebook: a(href="#")
+          +social-media__icon("#facebook")
+        li.twitter: a(href="#")
+          +social-media__icon("#twitter")
 
 
 

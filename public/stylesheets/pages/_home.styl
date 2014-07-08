@@ -13,26 +13,39 @@ body
   background: #160c0c url('/images/main-bg.jpg') center 80% no-repeat
   background-size: contains
   font-family: 'Montserrat', sans-serif;
+  color: #fff
+  font-weight: 400
 
 .main-header
   cf()
   background: rgba(#fff, .12)
   margin-top: 0px
-  padding: 30px
+  padding: 40px
 
 .logo
   width: 100px
-  // col(2/12)
+  margin-left: 15px
   img
     width: 100%
     height: auto
 
 .participate
+  font-size(14px)
   col(7/12)
   p
     margin-top: 0
   ol
     margin-bottom: 0
+    margin: 0
+    list-style: none
+    padding: 0
+  .highlight
+    font-size(18px)
+    font-weight: 700
+    color: #fed24f
+  p.highlight
+    margin-bottom: 10px
+    margin-top: 20px
 
 .next-match
   col(5/12)
@@ -47,17 +60,23 @@ body
   span(4/12)
   background: rgba(#eee000, .6)
   padding: 20px 40px
-  min-height: 498px
+  min-height: 520px
   border-right: 1px solid rgba(#000, .1)
-  color: #fff
+  transition(all 0.3s ease-in-out)
+  position: relative
   &:hover
     background: rgba(#eee000, .7)
   .social-media
     float: right
+  footer
+    position: absolute
+    bottom: 40px
+    left: 40px
+    right: 40px
 
 .ong__title
   text-transform: uppercase
-  font-size(24px)
+  font-size(20px)
 
 .ong__description
   font-size(14px)
@@ -65,15 +84,53 @@ body
 .help-btn
   float: left
 
-.social-media
-  inline-list()
-  list-style: none
-  margin: 0
-  padding: 0
-
 .main-footer
   margin-bottom: 70px
 
+.next-match
+  figure
+    text-align: center
+  img
+    display: block
+    margin-bottom: 30px
+  legend
+    font-size(22px)
+    margin-bottom: 5px
+  span
+    text-transform: uppercase
+    font-size(14px)
+
+.social-media
+  inline-list: 15px
+  a, svg
+    display: block
+  svg
+    fill: #000
+  li
+    background: #fff
+    border-radius: 100%
+
+.icon
+  height: 39px
+  width: 39px
+
+.help-btn
+  background: #00854a
+  inline-block()
+  font-size(13px)
+  text-transform: uppercase
+  padding: 7px
+  color: #fff
+  text-decoration: none
+  transition(all 0.3s ease-in-out)
+  &:hover
+    background: #00733f
+
+.social-media--alt
+  .facebook
+    background: #00854a
+  .twitter
+    background: #fed24f
 
 
 
