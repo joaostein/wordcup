@@ -1,5 +1,66 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .logo
+      img(src="images/logo.png")
+    header.main-header
+
+      .participate
+        p Agora você pode ajudar a seleção brasileira a ganhar o mundial e ao mesmo tempo, ajudar milhares de brasileiros a ter mais um motivo para comemorar. Faça uma promessa que vai fazer a diferença e ajude o Brasil a ganhar muito mais do que uma taça.
+        p.highlight Como Participar?
+        ol
+          li 1 Escolha uma das ONGS abaixo
+          li 2 Compartilhe sua promessa
+          li 3 Torça pela seleção
+
+      .next-match
+        figure
+          img(src="images/next-match-semi.png")
+          legend 13/07/2014 - 4:00PM (Horário Local)
+          span 
+            | Estádio Jornalista Mário Filho (Maracanã)
+            br
+            | Rio de Janeiro
+
+    section.donate
+      article.ong
+        h1.ong__title Associação Vagalume
+        .ong__description
+          p A Vaga Lume acredita que o livro e suas histórias  permitem que a criança transcenda sua realidade e entre no plano da imaginação, da reflexão e da criatividade.
+          p Há 12 anos mobiliza pessoas e comunidades rurais da Amazônia Legal brasileira, promovendo vínculos e aproximando distâncias entre pessoas e livros, o rural e o urbano, gerações e diversos saberes.
+        footer
+          a.help-btn(href="#") + Como Ajudar
+          ul.social-media
+            li: a(href="#") Facebook
+            li: a(href="#") Twitter
+
+      article.ong
+        h1.ong__title GRAAC
+        .ong__description
+          p O GRAACC - Grupo de Apoio ao Adolescente e à Criança com Câncer - é uma instituição sem fins lucrativos, criada para garantir a crianças e adolescentes com câncer.
+          p O hospital do GRAACC realiza cerca de 3.000 anualmente, entre sessões de quimioterapia, consultas, procedimentos ambulatoriais, cirurgias, transplantes de medula óssea e outros. Além de diagnosticar e tratar o câncer infantil, o GRAACC atua no desenvolvimento do ensino e pesquisa.
+        footer
+          a.help-btn(href="#") + Como Ajudar
+          ul.social-media
+            li: a(href="#") Facebook
+            li: a(href="#") Twitter
+
+      article.ong
+        h1.ong__title SOS Mata Atlântica
+        .ong__description
+          p A Fundação SOS Mata Atlântica é uma ONG criada em 1986. Tem como missão defender o que resta da mata atlântica, conservando os patrimônios naturais, histórico, também para ajudar os animais selvagens, dessas regiões, buscando um desenvolvimento sustentável.
+          p Tem como missão defender os remanescentes da mata atlântica, valorizar a identidade física e cultural das comunidades humanas que os habitam.
+        footer
+          a.help-btn(href="#") + Como Ajudar
+          ul.social-media
+            li: a(href="#") Facebook
+            li: a(href="#") Twitter
+
+    footer.main-footer
+      ul.social-media.social-media--alt
+        li: a(href="#") Facebook
+        li: a(href="#") Twitter
+
+
+
