@@ -3,6 +3,7 @@ var load = function () {
     {
       method: 'share',
       href: 'https://wordcup.herokuapp.com',
+      message: 'test message oh yeah'
     },
     function(response) {
       if (response && !response.error_code) {
