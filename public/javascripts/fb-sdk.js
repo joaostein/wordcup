@@ -4,8 +4,7 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v2.0'
   });
-
-  load();
+  window.loadClickListeners();
 };
 
 (function(d, s, id){
