@@ -53,15 +53,8 @@
       name: params.name
     };
 
-    FB.ui(finalParams, cb);
+    FB.ui(finalParams);
   };
 
-  var cb = function(response) {
-    if (response && !response.error_code) {
-      alert('Posting completed.');
-    } else {
-      alert('Error while posting.');
-    }
-  };
 
 }(window, document));
