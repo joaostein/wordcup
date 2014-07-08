@@ -1,0 +1,69 @@
+//-----------------------------------------------------------------------
+//
+//  Base » Settings
+//
+//  Contains all settings configurations.
+//
+//-----------------------------------------------------------------------
+
+// edit()
+
+//--------------- Variables ---------------//
+base-font-size = 16
+base-line-height = 24
+enable-em-breakpoints = true
+
+//--------------- Mixins ---------------//
+
+// Font-size Mixin using rem
+font-size($fontValue = base-font-size, $baseFontValue = base-font-size, $baseLineValue = base-line-height)
+  font-size   $fontValue px
+  font-size   ($fontValue / $baseFontValue) rem
+  line-height ($baseLineValue/$baseFontValue) * ($fontValue / $baseFontValue) rem
+  line-height ($fontValue / $baseFontValue) * $baseLineValue
+
+// Crossbrowser inline-block
+inline-block()
+  *display: inline
+  *vertical-align: auto
+  display: -moz-inline-stack
+  display: inline-block
+  zoom: 1;
+
+// Clearfix
+clearfix()
+  *zoom:1
+  &:before,
+  &:after
+    content:""
+    display:table
+  &:after
+    clear:both
+
+// Mixin: Inline List
+// For when you need your list to be horizontal. Pass it the spacing you want between list
+// elements, whatever units you'd like. Defaults to 20px
+// ex. inline-list
+// ex. inline-list: 15px
+inline-list(spacing = 20px)
+  clearfix()
+  margin: 0
+  padding: 0
+  li
+    float: left
+    list-style-type: none
+    margin-right: spacing
+  li:last-child
+    margin-right: 0
+
+// Vendor mixin helper
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  -o-{prop} args
+  {prop} args
+
+// Transition mixin
+transition()
+  vendor('transition', arguments)
