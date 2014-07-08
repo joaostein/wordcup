@@ -18,8 +18,16 @@ figure
   margin: 0
 
 body
-  background: #160c0c url('/images/main-bg.jpg') center 80% no-repeat
-  background-size: contains
+  background: #160c0c url('/images/main-bg.jpg') 35% -50% no-repeat
   font-family: 'Montserrat', sans-serif;
   color: #fff
   font-weight: 400
+
++above(853px)
+  body
+    background: #160c0c url('/images/main-bg.jpg') 35% -200% no-repeat
+
++above(1024px)
+  body
+    background: #160c0c url('/images/main-bg.jpg') center 80% no-repeat
+    background-size: contains
